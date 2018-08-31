@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-light navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -9,23 +9,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <a class="navbar-brand" href="#">MyCMS</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav bg-light">
 
 
                     <?php
                     include 'db.php';
 
                     $result = $dbConn->query('SELECT * FROM categories');
-                    $categories = $result->fetchAll(PDO::FETCH_BOTH);
+                    $categories = $result->fetchAll(PDO::FETCH_ASSOC);
 
                     foreach ($categories as $category) {
-                        $cat_title = $category['cat_title'];
+                        $cat_title = $category[ 'cat_title' ];
 
-                        echo "<li> {$cat_title} </li>";
+                        echo "<li><a href='#'> {$cat_title} </a></li>";
                     }
 
 

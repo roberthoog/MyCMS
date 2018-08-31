@@ -17,8 +17,8 @@ try {
 } catch(PDOException $e) {
     echo $e->getMessage();
 }
-
-if($dbConn) {
-    echo 'YAAAAAAAAAAAAAAY';
-    }
+//
+//if($dbConn) {
+//    echo 'YAAAAAAAAAAAAAAY';
+//    }
 ?>
