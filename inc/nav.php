@@ -19,13 +19,15 @@
                     <?php
                     include 'db.php';
 
-                    $statement = $dbConn->query('SELECT * FROM categories')->fetchAll();
-                                        foreach ($statement as $row);
-                        echo $row[categories];
-//
-//                    while ($row = $statement->fetch()) {
-//                        echo $row['categories']."<br> \n";
-//                    }
+                    $result = $dbConn->query('SELECT * FROM categories');
+                    $categories = $result->fetchAll(PDO::FETCH_BOTH);
+
+                    foreach ($categories as $category) {
+                        $cat_title = $category['cat_title'];
+
+                        echo "<li> {$cat_title} </li>";
+                    }
+
 
 
                     ?>
