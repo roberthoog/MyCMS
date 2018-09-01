@@ -5,7 +5,7 @@ $databaseHost = 'localhost';
 $databaseName = 'cms';
 $databaseUsername = 'root';
 $databasePassword = 'r00t';
-define( 'DB_CHARSET', 'utf8');
+//define( 'DB_CHARSET', 'utf8');
 ini_set('default_charset', 'utf-8');
 
 try {

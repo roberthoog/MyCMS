@@ -13,10 +13,22 @@
             <!-- Blog Entries Column -->
             <div class="col-md-8">
 
-                <h1 class="page-header">
-                    Page Heading
-                    <small>Secondary Text</small>
-                </h1>
+                <?php include 'inc/db.php';
+
+                $posts = $dbConn->query('SELECT * FROM posts');
+                $categories = $result->fetchAll(PDO::FETCH_ASSOC);
+
+                foreach ($posts as $post) {
+                    $post_title = $post[ 'post_title' ];
+
+                    echo "<h1 class='page-header'><a href='#'> {$post_title} </a></h1>";
+                }
+
+
+
+                ?>
+
+
 
                 <!-- First Blog Post -->
                 <h2>

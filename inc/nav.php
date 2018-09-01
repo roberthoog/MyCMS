@@ -25,7 +25,7 @@
                     foreach ($categories as $category) {
                         $cat_title = $category[ 'cat_title' ];
 
-                        echo "<li><a href='#'> {$cat_title} </a></li>";
+                        echo "<li class='text-light'><a href='#'> {$cat_title} </a></li>";
                     }
 
 
